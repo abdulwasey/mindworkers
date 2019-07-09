@@ -1,0 +1,315 @@
+<% include ../partials/headers %>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Selectize.js Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <!--[if IE 8]><script src="js/es5.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/standalone/selectize.js"></script>
+    <script src="/js/index.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.10.6/jquery.typeahead.js"></script>
+
+</head>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="header">
+                      <!--   <h3>Got a new project want to share with your team ?</h3> -->
+                        <h3 class="title" style="text-align: center;">Add Project</h3>
+                        <hr>
+                    </div>
+                    <div class="content">
+                        <form action="/dashboard/project/add" method="POST">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label>Posting as</label>
+                                        <input type="text" class="form-control" name="project_manager" placeholder="Company" value="saikiran2211" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Title</label>
+                                        <input type="text" class="form-control" name="title" placeholder="KKTI PRIVATE LTD" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Project Type</label>
+                                        <select name="type" class="form-control">
+                                           <option>Please select the type of application</option>
+                                           <option>Website</option>
+                                           <option>Mobile App</option>
+                                           <option>Desktop App</option>
+                                       </select>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Technologies Used</label>
+                                    <textarea class="form-control" placeholder="Nodejs,ExpressJs,MongoDb" cols="50" rows="1" name="technologies_used"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Estimate</label>
+                                    <input  type="text" class="form-control" placeholder="30k" value="" name="estimate">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>Deadline</label>
+                                    <input type="date" class="form-control" placeholder="30k" value="" name="deadline">
+                                </div>
+                            </div>
+                        </div>
+
+
+   <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>GitHub</label>
+                                    <input type="text" class="form-control" name="git_link" placeholder="Http://www.github.com/mindworkers/project_name" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Slack</label>
+                                    <input type="text" class="form-control" name="slack" placeholder="salck.com/project_name" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Heroku</label>
+                                    <input type="text" class="form-control" name="heroku_link" placeholder="http://www.projectname.herokuapp.com">
+                                </div>
+                            </div>
+                        </div>
+   <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea rows="5" class="form-control" placeholder="Tell us more about the project"></textarea>
+                                </div>
+                            </div>
+                        </div>
+ <h4>Client Details</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" name="client_name" placeholder="John" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" name="client_email" placeholder="asd@gmail.com" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="number" class="form-control" name="client_contact" placeholder="847834583">
+                                </div>
+                            </div>
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Company Name</label>
+                                    <input type="text" class="form-control" name="client_company" placeholder="TCS">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                      
+
+                        <button type="submit" class="btn btn-info btn-fill pull-right">Add Project</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+      <h3 style="color: red;text-align: center;">PROJECT CONDITIONS</h3>
+     
+         <p ><span style="color: red;">* </span>Please add Project only if it is confirmed</p>
+           <p><span style="color: red;">* </span> Please talk to team before adding a project</p>
+             <p><span style="color: red;">* </span> Get the complete details of the project before you add</p>
+         
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Company
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                       Blog
+                   </a>
+               </li>
+           </ul>
+       </nav>
+       <p class="copyright pull-right">
+        &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+    </p>
+</div>
+</footer>
+
+</div>
+</div>
+
+
+</body>
+
+<!--   Core JS Files   -->
+<script src="/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--  Charts Plugin -->
+<script src="/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="/js/bootstrap-notify.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+<!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+<script src="/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+<script src="/js/demo.js"></script>
+
+<script>
+    $().ready(function(){
+        demo.initGoogleMaps();
+    });
+</script>
+
+
+
+
+<script type="text/javascript">
+
+var data = [{
+  "name": "country",
+  "id": "country",
+  "typeReport": "shipment"
+}, {
+  "name": "customer name",
+  "id": "customer name",
+  "typeReport": "shipment"
+}, {
+  "name": "order number",
+  "id": "order number",
+  "typeReport": "serial"
+}, {
+  "name": "line number",
+  "id": "line number",
+  "typeReport": "serial"
+}];
+
+
+
+typeof $.typeahead === 'function' && $.typeahead({
+  input: ".js-typeahead-input",
+  minLength: 0,
+  maxItem: 8,
+  maxItemPerGroup: 6,
+  order: "asc",
+  hint: true,
+  searchOnFocus: true,
+
+  group: {
+    key: "typeReport",
+    template: function(item) {
+      var typeReport = item.typeReport;
+      return typeReport;
+    }
+  },
+  emptyTemplate: 'no result for {{query}}',
+  groupOrder: ["shipment", "serial"],
+  display: ["name"],
+  correlativeTemplate: true,
+  dropdownFilter: [{
+    key: 'typeReport',
+    template: '<strong>{{typeReport}}</strong> typeReport',
+    all: 'All Reports'
+  }],
+  multiselect: {
+    limit: 5,
+    limitTemplate: 'You can\'t select more than 2 teams',
+    matchOn: ["id"],
+    data: function() {
+      var deferred = $.Deferred();
+      return deferred;
+    },
+    callback: {
+      onClick: function(node, item, event) {
+        event.preventDefault();
+        console.log(item);
+        alert(item.name + ' Clicked!');
+      },
+      onCancel: function(node, item, event) {
+        console.log(item)
+      }
+    }
+  },
+
+  template: '<span>' +
+    '<span class="name">{{name}}</span>' +
+    '</span>',
+  source: {
+    groupName: {
+      data: data
+    }
+  },
+  debug: true
+});
+
+
+  var element = document.getElementById("maps");
+  element.classList.add("active");
+
+
+</script>
+
+
+</html>
