@@ -13,7 +13,7 @@
   "dependencies": {
     "@octokit/rest": "^16.28.2",
     "async": "^2.6.0",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.2",
     "cloudinary": "^1.4.2",
     "connect": "^3.6.6",
