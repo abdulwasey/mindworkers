@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@octokit/rest": "^16.28.2",
-    "async": "^2.6.0",
+    "async": "^3.2.2",
     "bcrypt": "^3.0.6",
     "body-parser": "^1.18.2",
     "cloudinary": "^1.4.2",
