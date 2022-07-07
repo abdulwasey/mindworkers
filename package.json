@@ -24,7 +24,7 @@
     "express-session": "^1.15.6",
     "heroku": "^7.22.7",
     "method-override": "^2.3.10",
-    "moment": "^2.19.2",
+    "moment": "^2.29.4",
     "mongoose": "^5.4.0",
     "nodemailer": "^4.4.0",
     "nodemon": "^1.18.10",
