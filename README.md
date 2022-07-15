@@ -1,2 +1,2 @@
-# Mindworkers-Dashboardnpm audit fix
+# Mindworkers-Dashboard
 # mindworkers
